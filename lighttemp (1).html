@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet"  href="jqm-icon-pack-fa.css" />
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style type="text/css">
+
+.ui-page { 
+    background:#ffffff;
+}
+
+.ui-indent{
+    margin-left:100px;
+    display: inline-block;
+}
+    
+</style>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Stats </h1>
+  </div>
+    
+  <div data-role="main" class="ui-content">
+    <h2>Current temperature: </h2>
+      <div class="ui-btn ui-icon-sun-o ui-btn-inline ui-btn-icon-left ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">Sun</div>
+    <div class = "ui-indent">
+        <h2 id = "two">T</h2></div>
+    <h2>Current light intensity: </h2>
+        <div class="ui-btn ui-icon-bolt ui-btn-icon-left ui-btn-inline ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">Bolt</div>
+    <div class="ui-indent">
+    <h2 id= "one">W</h2>
+    </div>
+  </div>
+
+
+</div> 
+
+<script>
+    document.getElementById('two').innerHTML = 25 + ' ' + 'C';
+    document.getElementById('one').innerHTML = 50 + ' ' + 'W';
+</script>
+
+</body>
+</html>
+

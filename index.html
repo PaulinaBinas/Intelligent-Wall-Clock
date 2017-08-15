@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="themes/my-custom-theme.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />    
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet"  href="jqm-icon-pack-fa.css" />
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="mainScreen">
+  <div data-role="header" data-tap-toggle="false" data-position="fixed" data-fullscreen="true">
+    <a href="#myPopupDialog" data-rel="popup" data-position-to="#menuPos" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-grid ui-btn-icon-notext"></a>
+    <h1>Intelligent Wall Clock</h1>
+    <div data-role="popup" id="myPopupDialog">
+
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="vertical">
+           <a href="#AlarmSetUp" class="ui-btn">New Alarm</a>
+           <a href="#Status" class="ui-btn">Current status</a>
+           <a href="#settings" class="ui-btn">Settings</a>
+           <a href="#help" class="ui-btn">Help</a>
+        </div>
+      </div>
+
+    </div>  
+  </div>
+  <br><br><br>
+  <span id="menuPos"></span>    
+  <div data-role="main" class="ui-content">
+    <p id="time">
+        <span class="timeHour">00:00</span>
+    </p>  
+    <br>
+    <p id="t">
+        <span id="testing"></span>
+    </p>  
+  </div>
+
+  <div data-role="footer">
+    <h1></h1>
+  </div>
+</div> 
+<div data-role="page" id="AlarmSetUp">
+    
+<div data-role="header">
+    <h1>Intelligent Wall Clock</h1>
+  </div>    
+    
+  <div data-role="main" class="ui-content">
+    <p id="someAlarm">
+        <label for="timePicker1">Set Time:</label>
+        <input type="time" name="timePicker1" id="timePicker1" value="01:00">  
+    </p>
+    <p>
+        <label for="label1">Label:</label>
+        <input type="text" name="label1" id="label1">
+    </p>
+    <p>
+    <label id="vibrateLabel"><input type="checkbox" id="vibrate" value="vib">Vibrate</label>
+    <label id="repeatLabel"><input type="checkbox" id="repeat" value="rep">Repeat</label>
+    </p>
+    <hr>
+    <p>
+        <label id="monday"><input type="checkbox" id="m" value="m">Monday</label>
+        <label id="tuesday"><input type="checkbox" id="tu" value="tu">Tuesday</label>
+        <label id="wednesday"><input type="checkbox" id="w" value="w">Wednesday</label>
+        <label id="thursday"><input type="checkbox" id="th" value="th">Thursday</label>
+        <label id="friday"><input type="checkbox" id="f" value="f">Friday</label>
+        <label id="saturday"><input type="checkbox" id="sa" value="s">Saturday</label>
+        <label id="sunday"><input type="checkbox" id="su" value="s">Sunday</label>
+    </p>
+       <a href="#mainScreen" onclick="alarmSet()" class="ui-btn">Set Alarm</a>
+       <a href="#mainScreen" class="ui-btn">Go back</a>
+  </div>
+    
+</div>
+
+<div data-role="page" id="settings">
+    
+  <div data-role="header">
+    <h1>Intelligent Wall Clock</h1>
+  </div>
+    
+  <div data-role="controlgroup" data-type="vertical">
+      <h3>Settings:</h3>
+      <a href="#shitPage" class="ui-btn">Change time format</a>
+      <a href="#shitPage" class="ui-btn">Change time</a>
+  </div> 
+    
+  <div data-role="main" class="ui-content">
+    <a href="#mainScreen" class="ui-btn">Main Screen</a>
+  </div>
+    
+</div>  
+    
+<div data-role="page" id="help">
+    
+  <div data-role="header">
+    <h1>Intelligent Wall Clock</h1>
+  </div>    
+    
+  <div data-role="main" class="ui-content">
+    <p>This application is the controller for the Intelligent Clock™. Using it you can remotely control the device, set its time, alarms and notifications.</p>
+ 
+    <p>To set up a new alarm, simply click on the menu icon in the upper left corner of the main screen and select New Alarm. To change the time of the Intelligent Clock™ also go to the menu icon and choose settings.</p>
+ 
+    <p>If you have any questions or doubts simply contact us at somerandomemail@mail.com</p>  
+    <a href="#mainScreen" class="ui-btn">Main Screen</a>
+  </div>
+    
+</div>    
+    
+<div data-role="page" id="Status">
+  <div data-role="header">
+    <h1>Stats</h1>
+  </div>
+    
+  <div data-role="main" class="ui-content">
+    <h2>Current temperature: </h2>
+      <div class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-sun-o ui-btn-icon-notext">Sun</div>
+    <div class = "ui-indent">
+        <h2 id = "two">T</h2></div>
+    <h2>Current light intensity: </h2>
+        <div class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bolt ui-btn-icon-notext">Bolt</div>
+    <div class="ui-indent">
+    <h2 id= "one">W</h2>
+    </div>
+    <a href="#mainScreen" class="ui-btn">Main Screen</a>
+  </div>
+
+
+</div>
+    
+<div data-role="page" id="shitPage">
+    <div data-role="header">
+        <h1>Intelligent Wall Clock</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>This content is not available in the alpha version of this app :)</p>
+    </div>
+    <a href="#settings" class="ui-btn">Go back</a>
+</div>
+    
+<audio id="myAudio">
+  <source src="buzzer.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+    document.getElementById('two').innerHTML = 21 + ' ' + 'C';
+    document.getElementById('one').innerHTML = 50 + ' ' + 'W';
+</script>
+    
+<script src="pageJS.js"></script>
+</body>
+</html>

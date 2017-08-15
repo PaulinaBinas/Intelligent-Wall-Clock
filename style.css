@@ -1,0 +1,55 @@
+#time {
+    text-align: center;
+    font-size: 24px;
+}
+
+#menuPos {
+    position: static;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+#repeatLabel {
+    left: 15;
+    position: static;
+}
+
+
+#vibrateLabel {
+    left: 15;
+    position: static;
+}
+
+#t {
+    margin-left: 15px;
+    text-align: left;
+}
+
+#t hr {
+    margin-left: -15px;
+}
+
+.onoffswitch-checkbox {
+    position: relative;
+    right: -210px;
+}
+
+#delButton {
+    position: relative;
+    right: -220px;
+}
+
+.ui-page { 
+    background:#ffffff;
+}
+
+.ui-indent{
+    margin-left:100px;
+    display: inline-block;
+}
